@@ -74,7 +74,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-`Hello My name is` [Simba](https://telegra.ph/file/ba06e09e38cbf8414a5ba.jpg)
+`Hello My name is` [Simba](https://telegra.ph/file/6525637dbd66e01f25785.jpg)
 `I'm here to help you manage your groups! Hit` *📚 COMMANDS* `button below to find out more about how to use me to my full potential.` 
 """
 
@@ -354,7 +354,7 @@ def Masha_about_callback(update: Update, context: CallbackContext):
                  ❍ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
                  ❍ I check for admins' permissions before executing any command and more stuffs
                  \SimbaCatRobot's licensed under the GNU General Public License v3.0_
-                 Here is the [💾Repository](https://github.com/GhangaleSangram).
+                 Here is the [💾Repository](https://github.com/GhangaleSangram) .
                  If you have any question about SimbaCatRobot, let us know at @TheProgrammerCaT_Bot.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
