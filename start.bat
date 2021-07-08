@@ -1,4 +1,4 @@
 @echo off
 TITLE Masha Robot
-:: Enables virtual env mode and then starts Masha
+:: Bật chế độ env ảo và sau đó khởi động Masha
 env\scripts\activate.bat && py -m MashaRoBot
