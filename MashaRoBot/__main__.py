@@ -353,7 +353,6 @@ def Masha_about_callback(update: Update, context: CallbackContext):
                  ❍ Tôi có thể cảnh báo người dùng cho đến khi họ đạt đến cảnh báo tối đa, với mỗi hành động được xác định trước như cấm, tắt tiếng, đá, v.v.
                  ❍ Tôi có một hệ thống lưu giữ ghi chú, danh sách đen và thậm chí là các câu trả lời được xác định trước cho một số từ khóa nhất định.
                  ❍ Tôi kiểm tra quyền của quản trị viên trước khi thực hiện bất kỳ lệnh nào và nhiều nội dung khác
-                 \Thổ Dân Robot licensed under the GNU General Public License v3.0_
                  Nếu bạn có bất kỳ câu hỏi nào về Thổ Dân Robot, hãy cho chúng tôi biết tại @thodan18.""",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
