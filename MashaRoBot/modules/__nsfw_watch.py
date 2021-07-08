@@ -38,9 +38,9 @@ async def nsfw(event):
     if event.is_group:
             pass
     if is_nsfwatch_indb(str(event.chat_id)):
-        await event.reply("`This Chat has Enabled NSFW watch`")
+        await event.reply("Trò chuyện này đã Bật đồng hồ NSFW")
     else:
-        await event.reply("`NSfw Watch is off for this chat`")
+        await event.reply("NSfw Watch đã tắt cho cuộc trò chuyện này")
 
 MUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 @register(pattern="^/addnsfw")
@@ -53,10 +53,10 @@ async def nsfw_watch(event):
         else:
             pass
     if is_nsfwatch_indb(str(event.chat_id)):
-        await event.reply("`This Chat Has Already Enabled Nsfw Watch.`")
+        await event.reply("Trò chuyện này đã được bật Nsfw Watch.")
         return
     add_nsfwatch(str(event.chat_id))
-    await event.reply(f"**Added Chat {event.chat.title} With Id {event.chat_id} To Database. This Groups Nsfw Contents Will Be Deleted And Logged in Logging Group**")
+    await event.reply(f"**Đã thêm trò chuyện {event.chat.title} Với ID {event.chat_id} vào Cơ sở dữ liệu. Nhóm này Nội dung Nsfw sẽ bị xóa và đăng nhập vào nhóm ghi nhật ký**")
 
 @register(pattern="^/rmnsfw ?(.*)")
 async def disable_nsfw(event):
@@ -68,10 +68,10 @@ async def disable_nsfw(event):
         else:
             pass
     if not is_nsfwatch_indb(str(event.chat_id)):
-        await event.reply("This Chat Has Not Enabled Nsfw Watch.")
+        await event.reply("Trò chuyện này chưa bật Nsfw Watch.")
         return
     rmnsfwatch(str(event.chat_id))
-    await event.reply(f"**Removed Chat {event.chat.title} With Id {event.chat_id} From Nsfw Watch**")
+    await event.reply(f"**Đã xóa trò chuyện {event.chat.title} Với Id {event.chat_id} Của Nsfw Watch**")
     
 @bot.on(events.NewMessage())        
 async def ws(event):
@@ -104,16 +104,16 @@ async def ws(event):
         else:
             ujwal = wstark.id
         try:
-            await tbot.send_message(event.chat_id, f"**#NSFW_WATCH** \n**Chat :** `{hehe}` \n**Nsfw Sender - User / Bot :** `{ujwal}` \n**Chat Title:** `{ctitle}`")  
+            await tbot.send_message(event.chat_id, f"**#NSFW_WATCH** \n**Nhóm :** `{hehe}` \n**Nsfw Sender - Người dùng / Bot :** `{ujwal}` \n**Tiêu đề trò chuyện:** `{ctitle}`")  
             return
         except:
             return
 
 
 __help__ = """
-Masha can protect your group from NSFW senders
- ❍ /addnsfw*:* Adds The Group to nsfw Watch List
- ❍ /rmnsfw*:* Removes The Group From nsfw Watch List
+Thổ dân có thể bảo vệ nhóm của bạn khỏi những người gửi NSFW
+ ❍ /addnsfw*:* Thêm Nhóm vào Danh sách Xem nsfw
+ ❍ /rmnsfw*:* Xóa nhóm khỏi danh sách xem nsfw
 """
 
-__mod_name__ = "NSFW"
+__mod_name__ = "Lọc 🔞"
