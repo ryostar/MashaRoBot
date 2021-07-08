@@ -1,6 +1,6 @@
 @echo off
-:: This runs the batch file as an admin - required UAC to be off
-:: This is just an asty hack in to get job done cause we host it on windows dedi.
+:: Thao tác này chạy tệp loạt với tư cách là quản trị viên - UAC bắt buộc phải tắt 3
+:: Đây chỉ là một cuộc đột nhập tinh vi để hoàn thành công việc vì chúng tôi lưu trữ nó trên windows.
 :: BatchGotAdmin
 :-------------------------------------
 REM  --> Check for permissions
@@ -25,7 +25,7 @@ if '%errorlevel%' NEQ '0' (
     pushd "%CD%"
     CD /D "%~dp0"
 :--------------------------------------
-:: your commands begin from this point.
+:: lệnh của bạn bắt đầu từ thời điểm này.
 :: stops the service and then starts it 
 net stop MashaRoBot
 net start MashaRoBot
